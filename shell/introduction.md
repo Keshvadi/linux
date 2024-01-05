@@ -7,7 +7,9 @@ permalink: /linux/introduction
 
 # The Shell
 
-Welcome to the world of Unix! In this web book, you will learn the basics of the Unix operating system and how to write scripts. Unix is an open-source operating system that is widely used in various fields, including academia, research, enterprise environments, and the development of critical infrastructure and systems worldwide. It is very powerful and flexible, and it is the preferred platform for many developers and system administrators.
+Welcome to the world of Unix! 
+
+In this web book, you will learn the basics of the Unix operating system and how to write scripts. Unix is an open-source operating system that is widely used in various fields, including academia, research, enterprise environments, and the development of critical infrastructure and systems worldwide. It is very powerful and flexible, and it is the preferred platform for many developers and system administrators.
 
 Computers these days have a variety of interfaces for giving them commands; fanciful graphical user interfaces, voice interfaces, and even AR/VR are everywhere. These are great for 80% of use-cases, but they are often fundamentally restricted in what they allow you to do — you cannot press a button that isn’t there or give a voice command that hasn’t been programmed. When it comes to harnessing the full potential of our computer systems, we have to go old-school and drop down to a textual interface: *The Shell*.
 
