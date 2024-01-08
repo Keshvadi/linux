@@ -8,6 +8,7 @@ layout: default
 ## Navigating The Shell
 
 When connected to a Unix system via the shell, understanding navigation is important. In this section, we will review some essential commands.
+
 <!-- Please note that the sample outputs provided in this documentation might differ from what you observe on your system due to variations in file names or contents. -->
 
 ---
@@ -42,6 +43,18 @@ From the next command, I'll only display the command itself without the precedin
 
 ---
 
+### `man`
+
+- Description: Displays the manual pages for detailed information and usage instructions.
+
+- Example usage:
+
+  ```bash
+  man ls
+  ```
+
+---
+
 ### `mkdir`
 
 - Description: Creates directories.
@@ -49,7 +62,7 @@ From the next command, I'll only display the command itself without the precedin
 - Example usage:
 
   ```bash
-  ubuntu:~$ mkdir new_folder # Generates a new directory named 'new_folder'
+  mkdir new_folder # Generates a new directory named 'new_folder'
   ```
 
 ---
@@ -61,11 +74,11 @@ From the next command, I'll only display the command itself without the precedin
 - Example usage:
 
   ```bash
-  ubuntu:~$ cd my_folder      # Moves into a directory named 'my_folder'
-  ubuntu:~/my_folder$ cd ..    # Navigates to the parent directory
-  ubuntu:~$ cd ~/Documents    # Changes to the 'Documents' directory in the user's home folder
-  ubuntu:~$ cd -               # Returns to the previous directory
-  ubuntu:~$ cd /               # Navigates to the root directory (top-level directory)
+  cd my_folder      # Moves into a directory named 'my_folder'
+  cd ..    # Navigates to the parent directory
+  cd ~/Documents    # Changes to the 'Documents' directory in the user's home folder
+  cd -               # Returns to the previous directory
+  cd /               # Navigates to the root directory (top-level directory)
   ```
 
 ### Note: Directory Symbols
@@ -96,7 +109,7 @@ From the next command, I'll only display the command itself without the precedin
 
 ---
 
-Mastering these navigation commands helps you traverse through directories seamlessly within the Linux system (particularly important when working with a remote system).
+Mastering these navigation commands helps you traverse directories within the Linux system seamlessly, which is particularly important when working with a remote system.
 
 <!-- to-do
 - add tree command

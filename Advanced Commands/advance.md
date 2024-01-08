@@ -19,18 +19,6 @@ layout: default
 
 ---
 
-### `man`
-
-- Description: Displays the manual pages for detailed information and usage instructions.
-
-- Example usage:
-
-  ```bash
-  man ls
-  ```
-
----
-
 ### `grep`
 
 - Description: Searches for text patterns within files.
@@ -146,7 +134,7 @@ layout: default
 
 ---
 
-### ``
+<!-- ### ``
 
 - Description:
 
@@ -276,4 +264,4 @@ layout: default
 
   ```
 
----
+--- -->

@@ -7,7 +7,9 @@ layout: default
 
 ## Pipe
 
-When you work in Windows, macOS, and most other operating systems, you probably spend your time running applications like web browsers, word processors, spreadsheets, and games. A typical application is packed with features: everything that the designers thought their users would need. So, most applications are self-sufficient. They don’t rely on other apps. You might copy and paste between applications from time to time, but for the most part, they’re separate.
+When you work in Windows, macOS, and most other operating systems, you probably spend your time running applications like web browsers, word processors, spreadsheets, and games. A typical application is packed with features: everything that the designers thought their users would need. So, most applications are self-sufficient.
+
+<!-- They don’t rely on other apps. You might copy and paste between applications from time to time, but for the most part, they’re separate. -->
 
 The Linux command line is different. Instead of big applications with tons of features, Linux supplies thousands of small commands with very few features. The command `cat`, for example, prints files on the screen and that’s about it. `ls` lists the files in a directory, `mv` renames files, and so on. Each command has a simple, fairly well-defined purpose. Linux makes it easy to combine commands so their individual features work together to accomplish your goal. This way of working yields a very different mindset about computing. Instead of asking _Which app should I launch?_ to achieve some result, the question becomes _Which commands should I combine?_.
 

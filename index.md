@@ -34,7 +34,7 @@ For our current objectives, follow these steps:
 When you launch your terminal, you will see a prompt that often looks a little like this:
 
 ```bash
-ubuntu@ip-10-0-0-63:~$ 
+ubuntu@ip-10-0-0-63:~$
 ```
 
 This is the main textual interface to the shell. It tells you that you are on the machine ip-10-0-0-63 and that your "current working directory", or where you currently are, is \~ (short for “home”). The \$ tells you that you are not the root user (more on that later). At this prompt you can type a command, which will then be interpreted by the shell. The most basic command is to execute a program:
@@ -46,8 +46,9 @@ Thu Jan  4 09:20:35 AM PST 2024
 
 Here, we executed the **`date`** program, which (perhaps unsurprisingly) prints the current date and time. The shell then asks us for another command to execute.
 
-*But how does the shell know how to find the date programs?*
-Well, the shell is a programming environment, just like Python, and so it has variables, conditionals, loops, and functions. When you run commands in your shell, you are really writing a small bit of code that your shell interprets. 
+_But how does the shell know how to find the date programs?_
+Well, the shell is a programming environment, just like Python, and so it has variables, conditionals, loops, and functions. When you run commands in your shell, you are really writing a small bit of code that your shell interprets.
+
 <!-- If the shell is asked to execute a command that doesn’t match one of its programming keywords, it consults an environment variable called `$PATH` that lists which directories the shell should search for programs when it is given a command. -->
 
 ## Flags and Options
