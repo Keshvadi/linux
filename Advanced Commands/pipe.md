@@ -18,15 +18,15 @@ The `|` operator lets you to connect the output of one command to the input of a
 - Example usage:
 
 ```bash
-    command1 | command2
+    command1 | command2 # Pipes the output of 'command1' as input to 'command2'
 ```
 
 ```bash
-    ls -l | sort -k 5rn
+    ls -l | sort -k 5rn # Lists files in long format and pipes the output to sort files by the fifth column in reverse numerical order
 ```
 
 ```bash
-    cat file1.txt file2.txt | sort > sorted_combined.txt
+    cat file1.txt file2.txt | sort > sorted_combined.txt # Concatenates content from 'file1.txt' and 'file2.txt', then sorts the combined content and saves it to 'sorted_combined.txt'
 ```
 
 ```bash
@@ -56,13 +56,13 @@ The `|` operator lets you to connect the output of one command to the input of a
 ```bash
     shuf data.txt | head -n 10 > newfile.txt # Shuffles the lines in 'data.txt', selects the first 10 lines, and saves them in 'newfile.txt'
 ```
-
+<!-- 
 ```bash
 
 ```
 
 ```bash
 
-```
-
-**Note:** `|` command, commonly known as the "pipe" command, is a powerful feature that allows you to chain commands together by passing the output of one command as input to another. This command concatenates the content of file1.txt and file2.txt using `cat`, then sorts the combined content using `sort`, and finally writes the sorted output to sorted_combined.txt.
+``` -->
+<!-- 
+**Note:** `|` command, commonly known as the "pipe" command, is a powerful feature that allows you to chain commands together by passing the output of one command as input to another. This command concatenates the content of file1.txt and file2.txt using `cat`, then sorts the combined content using `sort`, and finally writes the sorted output to sorted_combined.txt. -->
