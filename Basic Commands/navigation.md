@@ -1,13 +1,16 @@
 ---
 title: Navigation
 parent: Basic Commands
-nav_order: 12
+nav_order: 11
 layout: default
 ---
 
 ## Navigating The Shell
 
-When connected to a Linux system via the shell, understanding navigation is important. Here are some essential commands:
+When connected to a Unix system via the shell, understanding navigation is important. In this section, we will review some essential commands.
+<!-- Please note that the sample outputs provided in this documentation might differ from what you observe on your system due to variations in file names or contents. -->
+
+---
 
 ### `pwd`
 
@@ -15,10 +18,13 @@ When connected to a Linux system via the shell, understanding navigation is impo
 
 - Example usage:
 
-    ```bash
-    ubuntu:~$ pwd # Shows the current directory's path
-    /home/user
-    ```
+  ```bash
+  ubuntu:~$ pwd # Shows the current directory's path
+  ```
+
+From the next command, I'll only display the command itself without the preceding `ubuntu:~$`.
+
+---
 
 ### `ls`
 
@@ -27,9 +33,14 @@ When connected to a Linux system via the shell, understanding navigation is impo
 - Example usage:
 
   ```bash
-  ubuntu:~$ ls # Displays the contents of the current directory
-  file1.txt folder1 folder2
+  ls # Displays the contents of the current directory
+  ls -l # Displays detailed information about files
+  ls -a # Displays all files including hidden files
+  ls -la # Displays all files including hidden files with detailed information
+  ls -lt # Displays files sorted by modification time (latest first)
   ```
+
+---
 
 ### `mkdir`
 
@@ -37,9 +48,11 @@ When connected to a Linux system via the shell, understanding navigation is impo
 
 - Example usage:
 
-    ```bash
-    ubuntu:~$ mkdir new_folder # Generates a new directory named 'new_folder'
-    ```
+  ```bash
+  ubuntu:~$ mkdir new_folder # Generates a new directory named 'new_folder'
+  ```
+
+---
 
 ### `cd`
 
@@ -66,25 +79,25 @@ When connected to a Linux system via the shell, understanding navigation is impo
 ### `*` (Asterisk)
 
 - Description: Represents zero or more characters in a file or directory name.
-  
 - Example Usage (with `ls`):
 
-    ```bash
-    ls *.txt # Matches file1.txt, file2.txt, etc.
-    ```
+  ```bash
+  ls *.txt # Matches file1.txt, file2.txt, etc.
+  ```
 
 ### `?` (Question Mark)
 
 - Description: Denotes a single character within a file or directory name.
-  
 - Example Usage (with `ls`):
 
-    ```bash
-    ls file?.txt # Matches file1.txt, file2.txt, etc.
-    ```
+  ```bash
+  ls file?.txt # Matches file1.txt, file2.txt, etc.
+  ```
+
+---
 
 Mastering these navigation commands helps you traverse through directories seamlessly within the Linux system (particularly important when working with a remote system).
 
-<!-- to-do 
-- add tree command 
+<!-- to-do
+- add tree command
 - -->

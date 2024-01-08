@@ -52,7 +52,7 @@ When connected to a Linux system via the shell, understanding navigation is impo
 
   ```bash
   cat filename.txt # Displays the content of 'filename.txt'
-  cat file1.txt file2.txt # Concatenates 'file1.txt' and 'file2.txt' and displays the output    
+  cat file1.txt file2.txt # Concatenates 'file1.txt' and 'file2.txt' and displays the output
   ```
 
 **Note:** The cat command can be used to display the content of a single file or concatenate multiple files. This command is commonly used for file content analysis and manipulation.
@@ -91,19 +91,19 @@ When connected to a Linux system via the shell, understanding navigation is impo
 - Description: Redirects input from a file to a command. It provides the command with the content of the file as input.
 
 - Example usage:
-  
+
   ```bash
     cat < input.txt # Provides 'cat' command with 'input.txt' content as input
   ```
 
 **Note:** In this example, the `<` symbol for input redirection can be omitted. However, it becomes crucial in redirecting files within bash scripting (which you'll explore in the future). Here's an example that you might not be able to execute now, but it's worth trying later when you learn bash scripting:
 
-  ```bash
-    while read line; do
-        echo "Processing line: $line"
-        # Perform operations with each line of input
-    done < input_data.txt  # Explicit input redirection using '<'
-  ```
+```bash
+  while read line; do
+      echo "Processing line: $line"
+      # Perform operations with each line of input
+  done < input_data.txt  # Explicit input redirection using '<'
+```
 
 ### `cp`
 
@@ -160,16 +160,28 @@ When connected to a Linux system via the shell, understanding navigation is impo
   tail -n 5 filename.txt # Displays the last five lines of 'filename.txt'
   ```
 
-<!-- ### ``
+### `diff`
 
-- Description: 
+- Description: Compares two files line by line and displays the differences between them.
 
 - Example usage:
 
-    ```bash
-    
-    ``` -->
+  ```bash
+    diff file1.txt file2.txt # Compares contents of file1.txt and file2.txt and displays differences
+  ```
 
-<!-- to-do 
-- add tree command 
+  <!-- ### ``
+
+
+- Description:
+
+- Example usage:
+
+  ````bash
+
+  ``` -->
+  ````
+
+<!-- to-do
+- add tree command
 - -->

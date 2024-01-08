@@ -11,10 +11,10 @@ layout: default
 
 - Example usage:
 
-    ```bash
-    tar -cvf archive.tar directory/ # Creating a tar archive from files in a directory
-    tar -xvf archive.tar # Extracting files from a tar archive
-    ```
+  ```bash
+  tar -cvf archive.tar directory/ # Creating a tar archive from files in a directory
+  tar -xvf archive.tar # Extracting files from a tar archive
+  ```
 
 ---
 
@@ -24,10 +24,10 @@ layout: default
 
 - Example usage:
 
-    ```bash
-    wget https://example.com/file.zip # Downloading a file from a URL
-    wget -O output_filename.zip https://example.com/file.zip # Downloading a file and specifying an output filename
-    ```
+  ```bash
+  wget https://example.com/file.zip # Downloading a file from a URL
+  wget -O output_filename.zip https://example.com/file.zip # Downloading a file and specifying an output filename
+  ```
 
 ---
 
@@ -37,10 +37,10 @@ layout: default
 
 - Example usage:
 
-    ```bash
-    ssh username@remote_host # Connecting to a remote server
-    ssh -p 2222 username@remote_host # Connecting to a remote server on a specific port
-    ```
+  ```bash
+  ssh username@remote_host # Connecting to a remote server
+  ssh -p 2222 username@remote_host # Connecting to a remote server on a specific port
+  ```
 
 ---
 
@@ -50,81 +50,81 @@ layout: default
 
 - Example usage:
 
-    ```bash
-    scp username@remote_host:/remote/file.txt /local/directory/ # Copying from remote to local
-    scp /local/file.txt username@remote_host:/remote/directory/ # Copying from local to remote  
-    ```
+  ```bash
+  scp username@remote_host:/remote/file.txt /local/directory/ # Copying from remote to local
+  scp /local/file.txt username@remote_host:/remote/directory/ # Copying from local to remote
+  ```
 
 ---
 
 ### ``
 
-- Description: 
+- Description:
 
 - Example usage:
 
-    ```bash
-    
-    ```
+  ```bash
+
+  ```
 
 ---
 
 ### ``
 
-- Description: 
+- Description:
 
 - Example usage:
 
-    ```bash
-    
-    ```
+  ```bash
+
+  ```
 
 ---
 
 ### ``
 
-- Description: 
+- Description:
 
 - Example usage:
 
-    ```bash
-    
-    ```
+  ```bash
+
+  ```
 
 ---
 
 ### ``
 
-- Description: 
+- Description:
 
 - Example usage:
 
-    ```bash
-    
-    ```
+  ```bash
+
+  ```
 
 ---
 
 ### ``
 
-- Description: 
+- Description:
 
 - Example usage:
 
-    ```bash
-    
-    ```
+  ```bash
+
+  ```
 
 ---
 
 ### ``
 
-- Description: 
+- Description:
 
 - Example usage:
 
-    ```bash
-    
-    ```
+  ```bash
+
+  ```
 
 ---
