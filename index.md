@@ -44,7 +44,7 @@ For our current objectives, follow these steps:
 When you launch your terminal, you will see a prompt that often looks a little like this:
 
 ```bash
-root@ip-10-0-0-63:/# 
+root@ip-10-0-0-63:/#
 ```
 
 This is the main textual interface to the shell. It tells you that you are on the machine ip-10-0-0-63 and that your "current working directory", or where you currently are, is \/ (short for “root” directory). The \# tells you that you are the root user (more on that later). At this prompt you can type a command, which will then be interpreted by the shell. The most basic command is to execute a program:

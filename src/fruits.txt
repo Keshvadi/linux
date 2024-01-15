@@ -1,34 +1,93 @@
-apple
-bananaapple
-banana
-banana
-cherry
-apple
-cherry
-cherry
-banana
-cherry
-apple
-apple
-banana
-banana
-cherry
-apple
-cherry
-cherry
-cherry
-cherry
-apple
-banana
-banana
-apple
-banana
-banana
-cherry
-apple
-cherry
-cherry
-cherry
-apple
-cherry
-cherry
+Plantain
+Persimmon
+Tamarillo
+Solanum quitoense
+Elderberry
+Jackfruit
+Mulberry
+Tangerine
+Pomegranate
+Huckleberry
+Cloudberry
+Apricot
+Yuzu
+Redcurrant
+Salmonberry
+Pomelo
+Cantaloupe
+Avocado
+Mango
+Kumquat
+Grape
+Ugli fruit
+Physalis
+Purple mangosteen
+Raisin
+Chico fruit
+Cranberry
+Damson
+Lemon
+Satsuma
+Passionfruit
+Boysenberry
+Apple
+Cucumber
+Star fruit
+Nance
+Blackcurrant
+Juniper berry
+Salal berry
+Custard apple
+Cherimoya
+Jambul
+Olive
+Date
+Goji berry
+Blood orange
+Lime
+Guava
+Clementine
+Durian
+Melon
+Kiwano
+Papaya
+Coconut
+Gooseberry
+Lychee
+Salak
+Pineapple
+Pear
+Jujube
+Longan
+Raspberry
+Orange
+Plum
+Feijoa
+Marionberry
+Jabuticaba
+Tamarind
+Rambutan
+Currant
+Banana
+Fig
+Kiwifruit
+Watermelon
+Blackberry
+Grapefruit
+Honeyberry
+Prune
+Loquat
+Mangosteen
+Peach
+Dragonfruit
+Miracle fruit
+Honeydew
+Cherry
+Strawberry
+Quince
+Nectarine
+Blueberry
+Mandarine
+Bilberry
+Plumcot
+Soursop

@@ -27,7 +27,7 @@ layout: default
 
   ```bash
   grep "sample" sample.txt # search for the term "sample" within sample.txt
-  grep -i "error" /var/log/syslog # The `grep` command with the `-i` option searches case-insensitively for the term "error" within the /var/log/syslog file.
+  grep -i "error" /var/log/dpkg.log # The `grep` command with the `-i` option searches case-insensitively for the term "error" within the /var/log/dpkg.log file.
   ```
 
 **Note:** While these examples showcase the basics of usage of a command, these tools are more sophisticated.
@@ -102,7 +102,8 @@ layout: default
 
   ```bash
   sed 's/old_text/new_text/' content.txt # Substituting text in a file named `content.txt`
-  sed -i ’s/apple/orange/’ fruits.txt # Searches for the word ”apple” in the file ”fruits.txt” and replaces it with the word ”orange”
+  sed `s/apple/orange/` fruits.txt # Searches for the word ”apple” in the file ”fruits.txt” and replaces it with the word ”orange”
+  sed -i `s/apple/orange/` fruits.txt # -i to disable case sensetive
   sed '/pattern/d' data.txt # Deleting lines matching a pattern from `data.txt`
   ```
 
@@ -121,6 +122,7 @@ layout: default
 
 ---
 
+<!--
 ### `tar`
 
 - Description: A utility to manipulate archives.
@@ -132,7 +134,7 @@ layout: default
   tar -xvf archive.tar # Extracting files from a tar archive
   ```
 
----
+--- -->
 
 <!-- ### ``
 

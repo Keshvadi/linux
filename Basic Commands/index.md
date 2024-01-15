@@ -7,7 +7,7 @@ layout: default
 
 ## Prepare Your System for Tutorials
 
-Before jumping into the tutorials, run the following commands to set up your system for working with the provided examples. 
+Before jumping into the tutorials, run the following commands to set up your system for working with the provided examples.
 Follow these steps:.
 
 1. Download the sample files by right-clicking on this [link](../src/files.zip) and selecting "Copy link address."
