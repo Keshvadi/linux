@@ -25,7 +25,7 @@ apt install unzip -y
 wget Your_URL
 
 # Unzip the downloaded file
-unzip src.zip
+unzip files.zip
 
 # List the files
 ls

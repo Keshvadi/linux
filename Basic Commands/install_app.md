@@ -69,7 +69,7 @@ Package management is important for installing, updating, and removing software 
 - Example usage:
 
   ```bash
-  sudo remove package_name
+  sudo apt remove package_name
   ```
 
 ---
