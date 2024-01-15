@@ -1,7 +1,7 @@
 ---
 title: PDF Manipulation
 parent: Common Use Cases
-nav_order: 41
+nav_order: 42
 layout: default
 ---
 
@@ -16,11 +16,10 @@ layout: default
 ```
 
 ```bash
-    pdfunite directory/*.pdf output.pdf # Merges all PDFs from 'directory' into a single output.pdf
+    pdfunite *.pdf output.pdf # Merges all PDFs from current directory into a single output.pdf
 ```
 
 ```bash
-    pdfunite file1.pdf file2.pdf file3.pdf output.pdf # Merges file1.pdf, file2.pdf, and file3.pdf into output.pdf
     pdfunite output.pdf 3-1 output_rearranged.pdf # Reorders pages in 'output.pdf' (e.g., from 3-1) and saves as 'output_rearranged.pdf'
 ```
 

@@ -1,8 +1,16 @@
 ---
 title: Remote Working
 parent: Common Use Cases
-nav_order: 41
+nav_order: 43
 layout: default
+---
+
+## Remote Working
+
+Learning and using shell commands is essential for efficient remote work in Software Engineering. Shell commands provide powerful tools for managing tasks over a network.
+
+**Note:** To practice these commands, you'll need access to a remote system, which will be covered in the last session about networking.
+
 ---
 
 ### `tar`
@@ -39,7 +47,7 @@ layout: default
 
   ```bash
   ssh username@remote_host # Connecting to a remote server
-  ssh -p 2222 username@remote_host # Connecting to a remote server on a specific port
+  ssh -p 2222 username@remote_host # Connecting to a remote server on a specific port (default port is 22)
   ```
 
 ---
@@ -57,6 +65,7 @@ layout: default
 
 ---
 
+<!--
 ### ``
 
 - Description:
@@ -127,4 +136,4 @@ layout: default
 
   ```
 
----
+--- -->
