@@ -26,7 +26,13 @@ For our current objectives, follow these steps:
 2. Run the following command to start an Ubuntu container:
 
    ```bash
-   docker run -it ubuntu
+   docker run -it --rm ubuntu:22.04
+   ```
+
+3. Inside the Ubuntu container, run the following command to update it:
+
+   ```bash
+   apt update -y
    ```
 
 ## Using the shell

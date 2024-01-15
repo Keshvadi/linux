@@ -56,7 +56,8 @@ The `|` operator lets you to connect the output of one command to the input of a
 ```bash
     shuf data.txt | head -n 10 > newfile.txt # Shuffles the lines in 'data.txt', selects the first 10 lines, and saves them in 'newfile.txt'
 ```
-<!-- 
+
+<!--
 ```bash
 
 ```
@@ -64,5 +65,5 @@ The `|` operator lets you to connect the output of one command to the input of a
 ```bash
 
 ``` -->
-<!-- 
+<!--
 **Note:** `|` command, commonly known as the "pipe" command, is a powerful feature that allows you to chain commands together by passing the output of one command as input to another. This command concatenates the content of file1.txt and file2.txt using `cat`, then sorts the combined content using `sort`, and finally writes the sorted output to sorted_combined.txt. -->

@@ -1,5 +1,5 @@
 ---
-title: Remote Working
+title: PDF Manipulation
 parent: Common Use Cases
 nav_order: 41
 layout: default
@@ -7,7 +7,7 @@ layout: default
 
 ### `pdfunite`
 
-- Description: A utility to manipulate archives.
+- Description: A utility to manipulate PDF files.
 
 - Example usage:
 
@@ -24,6 +24,7 @@ layout: default
     pdfunite output.pdf 3-1 output_rearranged.pdf # Reorders pages in 'output.pdf' (e.g., from 3-1) and saves as 'output_rearranged.pdf'
 ```
 
+<!--
 ```bash
 pdftk
 ```
@@ -186,6 +187,6 @@ for file in *.mp4; do ffmpeg -i "$file" -vn -acodec libmp3lame -q:a 4 "${file%.m
 
   ```bash
 
-  ```
+  ``` -->
 
 ---
