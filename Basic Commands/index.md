@@ -10,7 +10,7 @@ layout: default
 Before jumping into the tutorials, run the following commands to set up your system for working with the provided examples. 
 Follow these steps:.
 
-1. Download the sample files by right-clicking on this [link](/src/files.zip) and selecting "Copy link address."
+1. Download the sample files by right-clicking on this [link](./src/files.zip) and selecting "Copy link address."
 2. Open your terminal and use the following commands, replacing `Your_URL` with the actual URL you just copied:
 
 ```bash
