@@ -50,6 +50,9 @@ From the next command, I'll only display the command itself without the precedin
 - Example usage:
 
   ```bash
+  # Install the 'man-db' package to set up the manual database for the first-time use  
+  apt install man-db
+  # Use the 'man' command to display the manual page for 'ls'
   man ls
   ```
 

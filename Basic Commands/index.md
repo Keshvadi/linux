@@ -14,14 +14,23 @@ Follow these steps:.
 2. Open your terminal and use the following commands, replacing `Your_URL` with the actual URL you just copied:
 
 ```bash
+# Navigate to the home directory
 cd home
+
+# Install wget for downloading files and unzip for extracting ZIP archives
 apt install wget -y
-apt install tar -y
+apt install unzip -y
+
+# Download the ZIP file from the URL you just copied
 wget Your_URL
-tar -xvf src.zip
+
+# Unzip the downloaded file
+unzip src.zip
+
+# List the files
+ls
 ```
 
 **Note:** If you encounter a "command not found" error when attempting to run a command, it means the required program is not installed. In such cases, you need to install the program first.
 
-For example, to used 'apt install wget -y' to install a program called 'wget' to download sample files, and then installed 'tar' to unzip the file. You will learn morea about these commands in this tutorial.
-
+For example, we installed a program called 'wget' to download sample files here. You will learn more about package management in this tutorial.

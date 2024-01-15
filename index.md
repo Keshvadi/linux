@@ -33,7 +33,10 @@ For our current objectives, follow these steps:
 4. Inside the Ubuntu container, run the following command to update it:
 
    ```bash
-   apt update -y
+   apt update -y # Update the package list on your system
+
+   # Install 'unminimize' to restore a minimal installation to a more complete state
+   unminimize
    ```
 
 ## Using the shell
