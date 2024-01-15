@@ -9,6 +9,8 @@ layout: default
 
 Understanding user management in Linux is important for system administration. Here are some essential commands and concepts:
 
+**Note:** When using Linux in a Docker container, you typically operate as the root user by default. However, it's not recommended to perform regular tasks as the root user due to the extensive privileges it possesses. It's advisable to switch to the root user only when necessary, such as when performing actions that require root privileges, like installing or removing packages.
+
 ---
 
 ### `passwd`
@@ -19,8 +21,10 @@ Understanding user management in Linux is important for system administration. H
 
   ```bash
   passwd # Changes the password for the current user
-  sudo passwd newuser # Sets a password for 'newuser'
+  passwd newuser # Sets a password for 'newuser'
   ```
+
+**Note:** If you are not logged in as the root user, use the `sudo` command before each command to execute these commands with root user privilege.
 
 ---
 
@@ -36,6 +40,19 @@ Understanding user management in Linux is important for system administration. H
 
 ---
 
+### `su`
+
+- Description: Switches the current user to another user.
+
+- Example usage:
+
+  ```bash
+  su new_user # Switches to the 'new_user' account
+  exit # Exits the current user session and returns to the previous user or root
+  ```
+
+---
+
 ### `deluser`
 
 - Description: Removes a user account from the system, along with associated files.
@@ -43,7 +60,7 @@ Understanding user management in Linux is important for system administration. H
 - Example usage:
 
   ```bash
-  sudo deluser newuser # Removes the user account 'newuser'
+  deluser newuser # Removes the user account 'newuser'
   ```
 
 ---
@@ -55,7 +72,7 @@ Understanding user management in Linux is important for system administration. H
 - Example usage:
 
   ```bash
-  sudo usermod -aG sudo newuser # Adds 'newuser' to the 'sudo' group
+  usermod -aG sudo newuser # Adds 'newuser' to the 'sudo' group
   ```
 
 ---

@@ -22,14 +22,15 @@ To explore Bash commands, we'll use Docker during this session. However, there a
 Dr. Geoff Fink will provide in-depth instruction on Docker in the upcoming session.
 For our current objectives, follow these steps:
 
-1. Open PowerShell on your Windows system.
-2. Run the following command to start an Ubuntu container:
+1. Open Docker on your Windows system.
+2. Open Command Line on your Windows system.
+3. Run the following command to start an Ubuntu container:
 
    ```bash
    docker run -it --rm ubuntu:22.04
    ```
 
-3. Inside the Ubuntu container, run the following command to update it:
+4. Inside the Ubuntu container, run the following command to update it:
 
    ```bash
    apt update -y
