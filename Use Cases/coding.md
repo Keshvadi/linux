@@ -36,7 +36,12 @@ To save and exit:
 2. Nano will prompt you to confirm. Press `Y` for yes.
 3. Nano will then ask if you want to save changes. Press `Enter` to confirm.
 
-Then Compile your C++ code using the g++ compiler.
+Then Compile your C++ code using the g++ compiler. To install g++ compiler use this command:
+
+```bash
+  apt install g++
+```
+
 For example, if your code is in hello.cpp:
 
 ```bash
@@ -70,6 +75,12 @@ Save this code in a file with a .py extension, for example, hello.py, and then r
 
 ```bash
   python hello.py
+```
+
+Rememebr that you need to install python3 on your system first using:
+
+```bash
+  apt install python3
 ```
 
 <!-- ### ``
