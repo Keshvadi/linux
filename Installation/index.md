@@ -28,6 +28,15 @@ Follow these steps:
 
 5. Use ```docker exec -it NAME /bin/bash``` to attach a second terminal to the same container. `NAME` is the container ID.
 
+6. You might need to install these packages on your docker:
+
+   ```bash
+   apt update -y
+   apt install nano -y   # Install Nano text editor
+   apt install g++ -y    # Install g++ compiler
+   apt install telnet -y # Install Telnet client
+   ```
+
 ## Windows
 
 - [Run Linux containers on Windows](https://ubuntu.com/tutorials/windows-ubuntu-hyperv-containers#1-overview)
