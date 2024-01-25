@@ -22,11 +22,10 @@ Follow these steps:
    ```bash
    apt update -y # Update the package list on your system
 
-   # Install 'unminimize' to restore a minimal installation to a more complete state
-   unminimize
+   unminimize # Install 'unminimize' to restore a minimal installation to a more complete state
    ```
 
-5. Use ```docker exec -it NAME /bin/bash``` to attach a second terminal to the same container. `NAME` is the container ID.
+5. Use `docker exec -it NAME /bin/bash` to attach a second terminal to the same container. `NAME` is the container ID.
 
 6. You might need to install these packages on your docker:
 
