@@ -17,15 +17,15 @@ layout: default
 
 ### Web Practice Files
 
-[html page](index.html)
+[html page](./src/index.html)
 
-[css file](main.css)
+[css file](./src/main.css)
 
-[js file](main.js)
+[js file](./src/main.js)
 
 ### API
 
-[api.py](api.py)
+[api.py](./src/api.py)
 
 ### Exercises
 
