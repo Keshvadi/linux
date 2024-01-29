@@ -1,0 +1,58 @@
+# Framework for Session 2
+
+- what is the internet, web, http
+  - what is a network
+  - what is the internet
+  - what is Web
+  - what is HTTP
+    - What is a network protocol
+  - how Web browser works
+  - web architecture
+    - front-end
+    - back-end (web server)
+    - database
+- web has three parts
+  - html
+  - css
+  - js
+  - web page profile as an example
+  - web frameworks like React, Vue, etc.
+- (now you have a web page and you need to host this web page)
+- Host web page on Git
+- Web Architecture and Web Server
+- AWS
+  - EC2
+  - Web Server
+    - web server applications like nginx or apache
+  - run a web server on AWS and host your website
+- API
+  - what is an api
+  - host your own api
+  - API NYT
+  - use postman to test api
+- Networking
+  - Telnet
+  - Ping
+  - Netstat
+  - Wireshark
+  - TShark
+- HTTP/HTTPS
+- Networking Principles
+  - IP
+  - MAC Address
+  - Client
+  - Server
+- Security
+  - Security Principles
+  - Encryption
+    - Tools
+  - Hash Function
+    - Tools
+  - Certificates
+    - Tools
+  - BitCoin
+  - Security Attackes
+    - Example
+  - Web Security
+- Resources
+
