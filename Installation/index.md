@@ -31,9 +31,15 @@ Follow these steps:
 
    ```bash
    apt update -y
+   apt upgrade -y
    apt install nano -y   # Install Nano text editor
    apt install g++ -y    # Install g++ compiler
    apt install telnet -y # Install Telnet client
+   apt install python3
+   apt install python3-pip
+   apt install net-tools
+   apt install tcpdump
+   apt install iputils-ping
    ```
 
 ## Windows
