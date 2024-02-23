@@ -1,6 +1,6 @@
-# The Shell (<a href="https://keshvadi.github.io/linux/">webpage</a>)
+# The Shell
 
-This is the source for The Shell textbook. It is built through Github Pages.
+This is the source for <a href="https://keshvadi.github.io/linux/">The Shell webbook</a>. It is built through Github Pages.
 
 Updates to the textbook are recorded in the commit history of this repository.
 
