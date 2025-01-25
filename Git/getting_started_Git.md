@@ -88,11 +88,15 @@ Verify with
     ```
 
 ## Cloning Repositories
-Say you need to collaborate with another developer. In this case you will clone their repo onto your system so that you can make your changes 
+Say you need to collaborate with another developer. In this case you will clone their repo onto your system so that you can make your changes. And you will do this on a separate branch
 
 1. Clone the Repo
     ```bash 
-    git clone collaborator_URL.com
+    git clone collaborator_URL.com 
+
+    # Create a new Branch for your changes
+    git checkout -b Your_Branch
+    ```
 
 2. Make your changes and check what files you modified
     ```bash
@@ -102,6 +106,8 @@ Say you need to collaborate with another developer. In this case you will clone 
 3. Check if your files have been tracked and then Commit and Push
     ```bash 
     git add <files you created>
+    or
+    git add .
     
     #check your working area to make sure the files are tracked
     git status 
