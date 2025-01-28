@@ -1,6 +1,6 @@
 ---
 title: Installation
-nav_order: 90
+nav_order: 99
 has_children: false
 layout: default
 ---
