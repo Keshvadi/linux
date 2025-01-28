@@ -1,12 +1,13 @@
 ---
-title: The Shell
+title: Missing Soft.Eng Coruse
 layout: home
 premalink: /home/
 nav_order: 1
 ---
 
-## The Shell
+## The Missing Software Engineering Course
 
+### The Shell
 Computers these days have a variety of interfaces for giving them commands; fanciful graphical user interfaces, voice interfaces, and even AR/VR are everywhere. These are great for 80% of use-cases, but they are often fundamentally restricted in what they allow you to do — you cannot press a button that isn’t there or give a voice command that hasn’t been programmed. When it comes to harnessing the full potential of our computer systems, we have to go old-school and drop down to a textual interface: **_The Shell_**.
 
 <!-- Nearly all platforms you can get your hands on have a shell in one form or another, and many of them have several shells for you to choose from. While they may vary in the details, at their core they are all roughly the same: they allow you to run programs, give them input, and inspect their output in a semi-structured way. -->
