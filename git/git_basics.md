@@ -9,8 +9,8 @@ layout: default
 
 TBD
 
-  Remote Repositories (GitHub)
-    Cloning, Pushing, Pulling
-    Pull Requests
-    Issues
-    .gitignore
+Remote Repositories (GitHub)
+Cloning, Pushing, Pulling
+Pull Requests
+Issues
+.gitignore

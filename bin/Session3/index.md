@@ -1,4 +1,3 @@
-
 ## The Missing SENG - Session 3
 
 ### Slides

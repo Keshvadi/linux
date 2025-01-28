@@ -8,9 +8,13 @@ layout: default
 ## Introduction to Docker
 
 ### Introduction to Docker
+
 ### Dockerfile
+
 ### Running and Managing Containers
+
 ### Docker Compose
+
 ### Volumes
 
 TBD

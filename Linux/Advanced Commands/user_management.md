@@ -88,6 +88,7 @@ Understanding user management in Linux is important for system administration. H
   ```
 
 --- -->
+
 ## Users and Groups in Linux
 
 In Linux, each user is assigned a unique user ID, which is stored in `/etc/passwd`.

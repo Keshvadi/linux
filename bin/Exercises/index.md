@@ -1,4 +1,3 @@
-
 ## Exercises
 
 Practice your command-line skills with the following exercises.
