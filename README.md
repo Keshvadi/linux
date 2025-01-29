@@ -4,7 +4,7 @@ This is the source for <a href="https://keshvadi.github.io/linux/">The Shell web
 
 Updates to the textbook are recorded in the commit history of this repository.
 
-# Source Code Formatting
+# Source Code Formatting 
 
 This repository has auto-formatting enabled. The preferred way to format source is through Prettier on your local machine. Install Node on your computer, run `npm install -g yarn`, and then run `yarn`. To format code, use the `yarn prettier` command, which will automatically format all .md and .html files.
 
