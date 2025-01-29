@@ -1,7 +1,6 @@
 ---
-title: Resources
-nav_order: 100
+title: CI/CD
+nav_order: 70
 has_children: true
 layout: default
 ---
-

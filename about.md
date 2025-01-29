@@ -2,7 +2,7 @@
 title: About
 layout: home
 premalink: /about/
-nav_order: 99
+nav_order: 110
 ---
 
 # The Shell
