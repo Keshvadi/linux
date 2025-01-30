@@ -1,27 +1,28 @@
 ---
-title: Getting Started in Docker 
+title: Getting Started in Docker
 parent: Docker
-nav_order: 
+nav_order: 53
 layout: default
 ---
 
-## Installation 
+## Installation
 
 This section will focus on installation for Linux on Ubuntu however links to download and install are hyperlinked
 
-- [Windows](https://docs.docker.com/desktop/setup/install/windows-install/ )
+- [Windows](https://docs.docker.com/desktop/setup/install/windows-install/)
 
-- [Mac](https://docs.docker.com/desktop/setup/install/mac-install/ )
+- [Mac](https://docs.docker.com/desktop/setup/install/mac-install/)
 
 ---
-## Linux 
+
+## Linux
 
 There are many ways to install docker for Linux, this segment will only focus on the general installation for Ubuntu.
-Refer to _[Install Docker Engine](https://docs.docker.com/engine/install/)_ for more details on different version and distros 
+Refer to _[Install Docker Engine](https://docs.docker.com/engine/install/)_ for more details on different version and distros
 
 1. You need to setup the docker repository for your system.
 
- This ensures your system is installing official packages from Docker. This guarantees you are getting the latest updates, security updates and features directly from Docker 
+This ensures your system is installing official packages from Docker. This guarantees you are getting the latest updates, security updates and features directly from Docker
 
     ```bash
     # Add Docker's official GPG key:
@@ -40,17 +41,15 @@ Refer to _[Install Docker Engine](https://docs.docker.com/engine/install/)_ for 
     ```
 
 2. Install the Docker packages (And update Docker)
-    ```bash
-    sudo apt-get install docker-ce docker-ce-cli containerd.io docker-buildx-plugin docker-compose-plugin
-    ```
 
-3. Test the docker installation with this command 
-    
-    ```bash
-    sudo docker run hello world
-    ```
-    
-    **_Note:_**(You must run docker commands with sudo, you can refer to [_linux postinstall_](https://docs.docker.com/engine/install/linux-postinstall/) to configure the Docker user group and mitigate this)
+   ```bash
+   sudo apt-get install docker-ce docker-ce-cli containerd.io docker-buildx-plugin docker-compose-plugin
+   ```
 
+3. Test the docker installation with this command
 
+   ```bash
+   sudo docker run hello world
+   ```
 
+   **_Note:_**(You must run docker commands with sudo, you can refer to [_linux postinstall_](https://docs.docker.com/engine/install/linux-postinstall/) to configure the Docker user group and mitigate this)
