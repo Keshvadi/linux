@@ -20,6 +20,9 @@ Git is another daunting concept when you first begin, however it is pretty simpl
 ### Merge 
 - Combines changes from one branch into another, typically bringing feature branches into the main branch.
 
+### Rebase
+- Rebasing in Git takes _your_ changes and reapplies them on top of the latest version of the branch, like stacking fresh edits on a new copy. This keeps the history clean instead of mixing old and new changes together.
+
 ### Remote Repository
 - A version of your repository stored on another server, like GitHub or GitLab. This allows you to share your work and collaborate. (The GitHub Section outlines this further)
 

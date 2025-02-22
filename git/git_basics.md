@@ -1,7 +1,7 @@
 ---
 title: Git Basics
 parent: Git & Version Control
-nav_order: 63
+nav_order: 65
 layout: default
 ---
 
@@ -64,7 +64,7 @@ The most commonly used remote repository is GitHub. If you are doing any sort of
     ```
 3. `pull`
 - This gets you the latest version stored in the remote repo
-- **Warning:**this can cause merge conflicts if your local version differs
+- **Warning:** this can cause merge conflicts if your local version differs
 
     ```bash 
     git pull origin main

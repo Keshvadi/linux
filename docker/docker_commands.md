@@ -99,11 +99,11 @@ layout: default
 
 ### Copying Containers
 
-- Copy a file from container to local host
+- **Copy a file from container to local host**
   ```bash
   docker cp my_container:usr/src/project/file .
   ```
-- Copy a file from local host to container
+- **Copy a file from local host to container**
   ```bash
   docker cp file my_container:/usr/src/project
   ```

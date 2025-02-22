@@ -1,33 +1,91 @@
 ---
 title: Getting Started in Git (Tutorial)
 parent: Git & Version Control
-nav_order: 64
+nav_order: 63
 layout: default
 ---
 
 ## Installation
 
-Make sure you have Git installed
-`bash 
-    sudo apt install git
-    `
+Make sure you have Git installed 
+```bash 
+sudo apt install git
+```
 
-Verify with
-`bash 
-    git --version
-    `
+Verify with  
+```bash 
+git --version
+```
+
+You should see an output like:
+```bash
+git version 2.43.0
+```
+If not then you can install it with 
+
+### **Windows**
+- Download [Git Installer](https://git-scm.com/downloads/win) and run it with the default settings
+
+- Open the git bash and verify the installation with
+```bash
+git --version
+```
+
+### **Mac**
+- install with HomeBrew
+```bash
+brew install git
+```
+- or with Xcode Command line tools
+```bash
+xcode-select --install
+```
+
+### **Linux**
+- Ubuntu/Debian based
+```bash
+sudo apt update && sudo apt install git
+```
+---
+
+## Setup Git
+
+Once Git is installed, you are gonna want to configure git properly...
+
+1. Set up your user information
+    ```bash
+    git config --global user.name "Your Name"
+    git config --global user.email "your-email@example.com"
+    ```
+2. Verify your configuration
+    ```bash
+    git config --global --list
+    ```
+
+    **_Note_**: You should see something like...
+    ```bash
+    user.name=Your Name
+    user.email=your-email@example.com
+    ```
+3. See the Github tab to link your profile to your git repository.
+- After connecting your account, test your connection with
+    
+    ```bash 
+    ssh -T git@github.com
+    ```
+    **_Note_**: You will see...
+    ```bash
+    Hi <your-username>! You've successfully authenticated.
+    ```
 
 ---
 
 ## Create a Repository
-
-1. Create a new repo
-
+1. **Create a new repo**
    ```bash
    git init --initial-branch=main
    ```
-
-2. Write a simple "Hello World" program
+2. **Write a simple "Hello World" program**
 
    ```bash
    #include <iostream>
@@ -38,14 +96,13 @@ Verify with
    }
    ```
 
-3. Compile it
+3. **Compile it**
 
    ```bash
    g++ hello.cpp
    ```
 
-4. Make sure it runs
-
+4. **Make sure it runs**
    ```bash
    ./a.out
    ```
@@ -56,26 +113,26 @@ Verify with
    git status
    ```
 
-5. Now stage the source code
+5. **Now stage the source code**
 
    ```bash
    git add hello.cpp
    ```
 
-6. Commit the changes
+6. **Commit the changes**
 
    ```bash
    # -m adds a commit message, make sure it is informative!
    git commit -m "Initial Commit"
    ```
 
-7. Create a git ignore file
+7. **Create a git ignore file**
 
    ```bash
    echo "a.out" > .gitignore
    ```
 
-8. To view the history of the repo
+8. **To view the history of the repo**
 
    ```bash
    git log
@@ -83,61 +140,4 @@ Verify with
 
    Shows who made what changes and when
 
-9. Push the repo to remote repository
-
-   ```bash
-   git remote set-url origin sample_URL.com && git push
-   ```
-
-10. Get the latest updates from the remote repository, but do not modify head
-
-    ```bash
-    git fetch
-    ```
-
-11. Get the latest updates from the remote repository
-    ```bash
-    git pull
-    ```
-
-## Cloning Repositories
-
-Say you need to collaborate with another developer. In this case you will clone their repo onto your system so that you can make your changes. And you will do this on a separate branch
-
-1. Clone the Repo
-
-   ```bash
-   git clone collaborator_URL.com
-
-   # Create a new Branch for your changes
-   git checkout -b Your_Branch
-   ```
-
-2. Make your changes and check what files you modified
-
-   ```bash
-   git status
-   ```
-
-3. Check if your files have been tracked and then Commit and Push
-
-   ```bash
-   git add <files you created>
-   or
-   git add .
-
-   #check your working area to make sure the files are tracked
-   git status
-
-   #push all your changes
-   git commit -a -m "Created files X,Y,Z and changed A,B,C"
-
-   # You would ideally be working on your own branch: Denoted as Your_Branch
-   git push origin Your_Branch
-
-   ```
-
-4. Validate your changes with
-   ```bash
-   git log
-   ```
+**_Note:_** you can visit the GitHub to see how to work with Remote repositories.
