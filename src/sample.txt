@@ -1,4 +1,0 @@
-This is a sample text file.
-It contains multiple lines for demonstration purposes.
-Sample line 1
-Sample line 2

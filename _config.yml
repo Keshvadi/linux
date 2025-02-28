@@ -1,10 +1,9 @@
-title: The Missing Soft.Eng Course
-description: An online workbook for Them Missing Soft.Eng Course
+title: Just the Docs Template
+description: A starter template for a Jeykll site using the Just the Docs theme!
 theme: just-the-docs
 
 url: https://keshvadi.github.io
 
 aux_links:
   Sina Keshvadi: https://keshvadi.github.io
-# color_scheme: dark
 color_scheme: custom

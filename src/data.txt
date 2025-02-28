@@ -1,8 +1,0 @@
-apple
-orange
-banana
-grape
-kiwi
-strawberry
-pineapple
-grapefruit
