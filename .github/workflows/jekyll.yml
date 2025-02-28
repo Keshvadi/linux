@@ -16,19 +16,23 @@ concurrency:
 
 jobs:
   build:
-    runs-on: self-hosted  #  Make SURE this is set to self-hosted
+    runs-on: ubuntu-22.04  # Use the older, stable image
     steps:
       - name: Checkout
         uses: actions/checkout@v4
 
-      - name: Check Ruby Version  # This step is just for verification
-        run: ruby -v
+      - name: Setup Ruby
+        uses: ruby/setup-ruby@v1
+        with:
+          ruby-version: '3.2.2'
+          bundler-cache: true
 
-      - name: Install dependencies
+      - name: Install dependencies # Explicitly install dependencies
         run: bundle install
 
       - name: Build with Jekyll
-        run: bundle exec jekyll build --baseurl "${{ steps.pages.outputs.base_path }}"
+        run: |
+          bundle exec jekyll build --baseurl "${{ steps.pages.outputs.base_path }}"
         env:
           JEKYLL_ENV: production
 
@@ -43,7 +47,7 @@ jobs:
     environment:
       name: github-pages
       url: ${{ steps.deployment.outputs.page_url }}
-    runs-on: self-hosted  # ALSO self-hosted here!
+    runs-on: ubuntu-22.04  # MUST match the build job
     needs: build
     steps:
       - name: Deploy to GitHub Pages
