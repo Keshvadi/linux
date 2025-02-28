@@ -5,7 +5,8 @@ has_children: true
 parent: The Shell
 layout: default
 ---
-<!-- 
+
+<!--
 ## Prepare Your System for Tutorials
 
 Before jumping into the tutorials, run the following commands to set up your system for working with the provided examples.

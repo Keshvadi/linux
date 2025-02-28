@@ -7,45 +7,58 @@ layout: default
 
 ## Installation
 
-Make sure you have Git installed 
-```bash 
+Make sure you have Git installed
+
+```bash
 sudo apt install git
 ```
 
-Verify with  
-```bash 
+Verify with
+
+```bash
 git --version
 ```
 
 You should see an output like:
+
 ```bash
 git version 2.43.0
 ```
-If not then you can install it with 
+
+If not then you can install it with
 
 ### **Windows**
+
 - Download [Git Installer](https://git-scm.com/downloads/win) and run it with the default settings
 
 - Open the git bash and verify the installation with
+
 ```bash
 git --version
 ```
 
 ### **Mac**
+
 - install with HomeBrew
+
 ```bash
 brew install git
 ```
+
 - or with Xcode Command line tools
+
 ```bash
 xcode-select --install
 ```
 
 ### **Linux**
+
 - Ubuntu/Debian based
+
 ```bash
 sudo apt update && sudo apt install git
 ```
+
 ---
 
 ## Setup Git
@@ -53,34 +66,38 @@ sudo apt update && sudo apt install git
 Once Git is installed, you are gonna want to configure git properly...
 
 1. Set up your user information
-    ```bash
-    git config --global user.name "Your Name"
-    git config --global user.email "your-email@example.com"
-    ```
+   ```bash
+   git config --global user.name "Your Name"
+   git config --global user.email "your-email@example.com"
+   ```
 2. Verify your configuration
-    ```bash
-    git config --global --list
-    ```
 
-    **_Note_**: You should see something like...
-    ```bash
-    user.name=Your Name
-    user.email=your-email@example.com
-    ```
+   ```bash
+   git config --global --list
+   ```
+
+   **_Note_**: You should see something like...
+
+   ```bash
+   user.name=Your Name
+   user.email=your-email@example.com
+   ```
+
 3. See the Github tab to link your profile to your git repository.
+
 - After connecting your account, test your connection with
-    
-    ```bash 
-    ssh -T git@github.com
-    ```
-    **_Note_**: You will see...
-    ```bash
-    Hi <your-username>! You've successfully authenticated.
-    ```
+  ```bash
+  ssh -T git@github.com
+  ```
+  **_Note_**: You will see...
+  ```bash
+  Hi <your-username>! You've successfully authenticated.
+  ```
 
 ---
 
 ## Create a Repository
+
 1. **Create a new repo**
    ```bash
    git init --initial-branch=main
@@ -103,6 +120,7 @@ Once Git is installed, you are gonna want to configure git properly...
    ```
 
 4. **Make sure it runs**
+
    ```bash
    ./a.out
    ```

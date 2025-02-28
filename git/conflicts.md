@@ -7,7 +7,7 @@ layout: default
 
 ## Merge Conflicts
 
-Merge conflicts happen when two branches have made changes to the *same line* of the *same file*, or when one branch deletes a file that another branch modifies. Git cannot automatically determine which version is correct, so it requires *manual intervention* to resolve the conflict. A merge conflict can also happen when you `pull` from a remote repository and there are changes.
+Merge conflicts happen when two branches have made changes to the _same line_ of the _same file_, or when one branch deletes a file that another branch modifies. Git cannot automatically determine which version is correct, so it requires _manual intervention_ to resolve the conflict. A merge conflict can also happen when you `pull` from a remote repository and there are changes.
 
 ---
 
@@ -51,30 +51,30 @@ Merge conflicts happen when two branches have made changes to the *same line* of
     >>>>>>> feature_branch
     ```
 
-    *Explanation of Markers:*
+    _Explanation of Markers:_
 
-    *   `<<<<<<< HEAD`:  Marks the beginning of the changes from your current branch (`HEAD`).
-    *   `=======`: Separates the changes from your current branch and the other branch.
-    *   `>>>>>>> feature_branch`: Marks the end of the changes from the other branch (the branch name or a commit hash will be shown).
+    - `<<<<<<< HEAD`: Marks the beginning of the changes from your current branch (`HEAD`).
+    - `=======`: Separates the changes from your current branch and the other branch.
+    - `>>>>>>> feature_branch`: Marks the end of the changes from the other branch (the branch name or a commit hash will be shown).
 
 3.  **Resolve the Conflict:**
 
-    Inside each conflicting section, you need to decide how to combine the changes.  You have several options:
+    Inside each conflicting section, you need to decide how to combine the changes. You have several options:
 
-    *   **Keep Your Changes (HEAD):** Delete the lines from the other branch and the conflict markers, leaving only the lines from your current branch (`HEAD`).
-    *   **Keep Their Changes (Other Branch):** Delete the lines from your current branch (`HEAD`) and the conflict markers, leaving only the lines from the other branch.
-    *   **Combine the Changes:** Edit the file to create a new, merged version that incorporates changes from *both* branches.  This is the most common approach.
-    *   **Rewrite the Section:** If neither version is correct, rewrite the entire section.
+    - **Keep Your Changes (HEAD):** Delete the lines from the other branch and the conflict markers, leaving only the lines from your current branch (`HEAD`).
+    - **Keep Their Changes (Other Branch):** Delete the lines from your current branch (`HEAD`) and the conflict markers, leaving only the lines from the other branch.
+    - **Combine the Changes:** Edit the file to create a new, merged version that incorporates changes from _both_ branches. This is the most common approach.
+    - **Rewrite the Section:** If neither version is correct, rewrite the entire section.
 
-    *Crucially, after making your choice, you must *remove the conflict markers* (`<<<<<<<`, `=======`, `>>>>>>>`).*  The file should look like normal code, without any Git markers.
+    *Crucially, after making your choice, you must *remove the conflict markers* (`<<<<<<<`, `=======`, `>>>>>>>`).* The file should look like normal code, without any Git markers.
 
-    *Example (keeping only your changes):*
+    _Example (keeping only your changes):_
 
     ```
     This is the content from the current branch (e.g., main).
     ```
 
-    *Example (combining changes):*
+    _Example (combining changes):_
 
     ```
     This is the content from the current branch (e.g., main).
@@ -92,7 +92,7 @@ Merge conflicts happen when two branches have made changes to the *same line* of
 
 5.  **Commit the Resolution:**
 
-    Create a commit to finalize the merge and record the conflict resolution.  Git will usually pre-populate the commit message with information about the merge, but you can edit it.
+    Create a commit to finalize the merge and record the conflict resolution. Git will usually pre-populate the commit message with information about the merge, but you can edit it.
 
     ```bash
     git commit  # Opens your editor to create the commit message (recommended)
@@ -113,33 +113,36 @@ Merge conflicts happen when two branches have made changes to the *same line* of
     ```
 
 ---
+
 ## Merge Conflict Tools and Strategies
 
-*   **Visual Merge Tools:** For complex conflicts, visual merge tools can be incredibly helpful.  These tools provide a graphical interface for comparing the conflicting versions and selecting changes.  Examples include:
-    *   **meld** (cross-platform, open-source)
-    *   **Beyond Compare** (commercial, cross-platform)
-    *   **KDiff3** (cross-platform, open-source)
-    *   **VS Code** (built-in merge conflict resolution)
-    *   **IntelliJ IDEA / PyCharm / WebStorm** (built-in)
-    *   ...and many others.
+- **Visual Merge Tools:** For complex conflicts, visual merge tools can be incredibly helpful. These tools provide a graphical interface for comparing the conflicting versions and selecting changes. Examples include:
 
-    You can configure Git to use your preferred merge tool with `git mergetool`.  For example, to configure `meld`:
+  - **meld** (cross-platform, open-source)
+  - **Beyond Compare** (commercial, cross-platform)
+  - **KDiff3** (cross-platform, open-source)
+  - **VS Code** (built-in merge conflict resolution)
+  - **IntelliJ IDEA / PyCharm / WebStorm** (built-in)
+  - ...and many others.
 
-    ```bash
-    git config --global merge.tool meld
-    git mergetool  # Open the configured merge tool to resolve conflicts
-    ```
+  You can configure Git to use your preferred merge tool with `git mergetool`. For example, to configure `meld`:
 
-*   **`git merge --abort`:** If you get stuck during a merge and want to start over, you can *abort* the merge using `git merge --abort`. This will return your working directory and index to the state they were in *before* you started the merge.
+  ```bash
+  git config --global merge.tool meld
+  git mergetool  # Open the configured merge tool to resolve conflicts
+  ```
 
-* **`git checkout --ours` / `git checkout --theirs` (Use with Caution!)**
-    * These commands offer a very fast, but potentially dangerous, shortcut during a merge conflict.
-    *`git checkout --ours path/to/file.txt`: Accepts **our** version for the conflict.
-    *`git checkout --theirs path/to/file.txt`: Accepts **their** version for the conflict.
-     * Use these commands when there are lots of conflicts and you can confidently choose one version over the other.
+- **`git merge --abort`:** If you get stuck during a merge and want to start over, you can _abort_ the merge using `git merge --abort`. This will return your working directory and index to the state they were in _before_ you started the merge.
 
-*   **Communication:**  If you're working on a team, communicate with the other developer(s) involved in the conflict to understand their changes and agree on the best resolution.
+- **`git checkout --ours` / `git checkout --theirs` (Use with Caution!)**
 
-*   **Testing:**  *Always* thoroughly test your code after resolving merge conflicts to ensure that the merged code works as expected and that no bugs were introduced.
+  - These commands offer a very fast, but potentially dangerous, shortcut during a merge conflict.
+    _`git checkout --ours path/to/file.txt`: Accepts **our** version for the conflict.
+    _`git checkout --theirs path/to/file.txt`: Accepts **their** version for the conflict.
+  - Use these commands when there are lots of conflicts and you can confidently choose one version over the other.
+
+- **Communication:** If you're working on a team, communicate with the other developer(s) involved in the conflict to understand their changes and agree on the best resolution.
+
+- **Testing:** _Always_ thoroughly test your code after resolving merge conflicts to ensure that the merged code works as expected and that no bugs were introduced.
 
 ---

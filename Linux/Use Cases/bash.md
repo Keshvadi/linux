@@ -19,7 +19,7 @@ Bash scripting allows you to automate tasks by writing sequences of commands in 
     nano my_script.sh
     ```
 
-2.  **Add the "shebang" line:**  At the very top of the file, add the following line:
+2.  **Add the "shebang" line:** At the very top of the file, add the following line:
 
     ```bash
     #!/bin/bash
@@ -37,7 +37,7 @@ Bash scripting allows you to automate tasks by writing sequences of commands in 
 
 4.  **Save the file:** In `nano`, press Ctrl+O, then Enter, then Ctrl+X.
 
-5.  **Make the script executable:**  Use the `chmod` command to give the script execute permissions:
+5.  **Make the script executable:** Use the `chmod` command to give the script execute permissions:
 
     ```bash
     chmod +x my_script.sh
@@ -49,7 +49,7 @@ Bash scripting allows you to automate tasks by writing sequences of commands in 
     ./my_script.sh
     ```
 
-    *Sample Output:*
+    _Sample Output:_
 
     ```
     Hello, world!
@@ -62,30 +62,30 @@ Bash scripting allows you to automate tasks by writing sequences of commands in 
 
 Variables store data (text or numbers) that you can use in your script.
 
-*   **Assigning Values:**
+- **Assigning Values:**
 
-    ```bash
-    my_variable="Hello"
-    number=123
-    ```
+  ```bash
+  my_variable="Hello"
+  number=123
+  ```
 
-    *Note:* There must be *no spaces* around the `=` sign.
+  _Note:_ There must be _no spaces_ around the `=` sign.
 
-*   **Accessing Values:** Use a `$` before the variable name:
+- **Accessing Values:** Use a `$` before the variable name:
 
-    ```bash
-    echo $my_variable
-    echo "The number is: $number"
-    ```
+  ```bash
+  echo $my_variable
+  echo "The number is: $number"
+  ```
 
-*   **User Input:** Use the `read` command:
+- **User Input:** Use the `read` command:
 
-    ```bash
-    #!/bin/bash
-    echo "Enter your name:"
-    read user_name
-    echo "Hello, $user_name!"
-    ```
+  ```bash
+  #!/bin/bash
+  echo "Enter your name:"
+  read user_name
+  echo "Hello, $user_name!"
+  ```
 
 ---
 
