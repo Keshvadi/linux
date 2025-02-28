@@ -16,15 +16,16 @@ concurrency:
 
 jobs:
   build:
-    runs-on: ubuntu-latest
+    runs-on: self-hosted  #  Make SURE this is set to self-hosted
     steps:
       - name: Checkout
         uses: actions/checkout@v4
-      - name: Setup Ruby
-        uses: ruby/setup-ruby@v1
-        with:
-          ruby-version: '3.2.2'
-          bundler-cache: true
+
+      - name: Check Ruby Version  # This step is just for verification
+        run: ruby -v
+
+      - name: Install dependencies
+        run: bundle install
 
       - name: Build with Jekyll
         run: bundle exec jekyll build --baseurl "${{ steps.pages.outputs.base_path }}"
@@ -32,19 +33,19 @@ jobs:
           JEKYLL_ENV: production
 
       - name: Upload artifact
-        uses: actions/upload-pages-artifact@v3  # Corrected to v3
+        uses: actions/upload-pages-artifact@v3
 
       - name: Setup Pages
         id: pages
-        uses: actions/configure-pages@v4 # Correct
+        uses: actions/configure-pages@v4
 
   deploy:
     environment:
       name: github-pages
       url: ${{ steps.deployment.outputs.page_url }}
-    runs-on: ubuntu-latest
+    runs-on: self-hosted  # ALSO self-hosted here!
     needs: build
     steps:
       - name: Deploy to GitHub Pages
         id: deployment
-        uses: actions/deploy-pages@v4 #Correct
+        uses: actions/deploy-pages@v4
