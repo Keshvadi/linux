@@ -32,11 +32,11 @@ jobs:
           JEKYLL_ENV: production
 
       - name: Upload artifact
-        uses: actions/upload-pages-artifact@v4 # Updated to v4
+        uses: actions/upload-pages-artifact@v3  # Corrected to v3
 
       - name: Setup Pages
         id: pages
-        uses: actions/configure-pages@v4
+        uses: actions/configure-pages@v4 # Correct
 
   deploy:
     environment:
@@ -47,4 +47,4 @@ jobs:
     steps:
       - name: Deploy to GitHub Pages
         id: deployment
-        uses: actions/deploy-pages@v4
+        uses: actions/deploy-pages@v4 #Correct
