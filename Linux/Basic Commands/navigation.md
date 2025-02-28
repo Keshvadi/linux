@@ -7,113 +7,163 @@ layout: default
 
 ## Navigating The Shell
 
-When connected to a Unix system via the shell, understanding navigation is important. In this section, we will review some essential commands.
+When connected to a Unix system via the shell, understanding how to navigate the file system is essential. This section covers fundamental commands for moving around and exploring directories.
 
-<!-- Please note that the sample outputs provided in this documentation might differ from what you observe on your system due to variations in file names or contents. -->
+*Note: The sample outputs below are examples. Your system's output may differ based on your files and directory structure.*
 
 ---
 
 ### `pwd`
 
-- Description: Prints the current working directory.
+*   **Description:** Prints the current working directory (the directory you are currently "in").
+*   **Example Usage:**
 
-- Example usage:
+    ```bash
+    pwd
+    ```
 
-  ```bash
-  ubuntu:~$ pwd # Shows the current directory's path
-  ```
+    *Sample Output:*
 
-From the next command, I'll only display the command itself without the preceding `ubuntu:~$`.
+    ```
+    /home/user/projects
+    ```
 
 ---
 
 ### `ls`
 
-- Description: Lists contents of the current directory.
+*   **Description:** Lists the contents of a directory.
+*   **Example Usage:**
 
-- Example usage:
+    ```bash
+    ls           # Displays files and directories in the current directory
+    ls -l        # Displays detailed information (permissions, owner, size, date)
+    ls -a        # Displays all files, including hidden files (those starting with .)
+    ls -la       # Combines -l and -a: detailed info, including hidden files
+    ls -lt       # Sorts by modification time, newest first
+    ```
 
-  ```bash
-  ls # Displays the contents of the current directory
-  ls -l # Displays detailed information about files
-  ls -a # Displays all files including hidden files
-  ls -la # Displays all files including hidden files with detailed information
-  ls -lt # Displays files sorted by modification time (latest first)
-  ```
+    *Sample Output (for `ls`):*
+
+    ```
+    file1.txt  my_folder  another_file.pdf
+    ```
 
 ---
 
 ### `man`
 
-- Description: Displays the manual pages for detailed information and usage instructions.
+*   **Description:** Displays the manual page (documentation) for a command.  This is your best friend for learning about commands!
+*   **Example Usage:**
 
-- Example usage:
+    ```bash
+    man ls  # Shows the manual page for the 'ls' command
+    ```
 
-  ```bash
-  # Install the 'man-db' package to set up the manual database for the first-time use
-  apt install man-db
-  # Use the 'man' command to display the manual page for 'ls'
-  man ls
-  ```
+    *Important Note:* On some systems (like Debian/Ubuntu), you might need to install the `man-db` package first:
+
+    ```bash
+    sudo apt install man-db  # Use this on Debian/Ubuntu if 'man' doesn't work
+    ```
+    (On other distributions, the package manager might be different, e.g., `yum` on CentOS/Fedora, or `pacman` on Arch.)
 
 ---
 
 ### `mkdir`
 
-- Description: Creates directories.
+*   **Description:** Creates a new directory.
+*   **Example Usage:**
 
-- Example usage:
-
-  ```bash
-  mkdir new_folder # Generates a new directory named 'new_folder'
-  ```
+    ```bash
+    mkdir new_directory  # Creates a directory named 'new_directory'
+    ```
+    *Sample Output:*
+    *(No output is printed to the console if the command is successful)*
 
 ---
 
 ### `cd`
 
-- Description: Changes directories.
+*   **Description:** Changes the current working directory.
+*   **Example Usage:**
 
-- Example usage:
-
-  ```bash
-  cd my_folder      # Moves into a directory named 'my_folder'
-  cd ..    # Navigates to the parent directory
-  cd ~/Documents    # Changes to the 'Documents' directory in the user's home folder
-  cd -               # Returns to the previous directory
-  cd /               # Navigates to the root directory (top-level directory)
-  ```
-
-### Note: Directory Symbols
-
-- `.` represents the current directory.
-- `..` refers to the parent directory.
-- `-` represents the previous directory visited, a quick navigation to the last accessed location.
-- `~` denotes the home directory.
-- `/` denotes the root directory.
-
-### `*` (Asterisk)
-
-- Description: Represents zero or more characters in a file or directory name.
-- Example Usage (with `ls`):
-
-  ```bash
-  ls *.txt # Matches file1.txt, file2.txt, etc.
-  ```
-
-### `?` (Question Mark)
-
-- Description: Denotes a single character within a file or directory name.
-- Example Usage (with `ls`):
-
-  ```bash
-  ls file?.txt # Matches file1.txt, file2.txt, etc.
-  ```
+    ```bash
+    cd my_folder       # Moves into the 'my_folder' subdirectory
+    cd ..             # Moves up one level (to the parent directory)
+    cd ~/Documents     # Moves to the 'Documents' folder inside your home directory
+    cd -              # Moves to the previously visited directory
+    cd /              # Moves to the root directory of the file system
+    ```
 
 ---
 
-Mastering these navigation commands helps you traverse directories within the Linux system seamlessly, which is particularly important when working with a remote system.
+### Directory Symbols
 
-<!-- to-do
-- add tree command
-- -->
+These symbols are shortcuts for common directory locations:
+
+*   `.` : Represents the current directory.
+*   `..`: Represents the parent directory.
+*   `-` : Represents the previous directory.
+*   `~`: Represents your home directory (e.g., `/home/user`).
+*   `/`: Represents the root directory.
+
+---
+
+### Wildcards: `*` and `?`
+
+Wildcards are special characters used to match multiple files or directories.
+
+*   **`*` (Asterisk):** Matches zero or more characters.
+    *   **Example Usage (with `ls`):**
+
+        ```bash
+        ls *.txt  # Lists all files ending with '.txt' (e.g., file1.txt, report.txt, notes.txt)
+                   # Will NOT match .txtfile (because * needs zero or more chars BEFORE .txt)
+        ls docs/* # Lists all files and directories inside the 'docs' directory
+        ```
+
+*   **`?` (Question Mark):** Matches exactly one character.
+    *   **Example Usage (with `ls`):**
+
+        ```bash
+        ls file?.txt  # Lists files like file1.txt, fileA.txt, file9.txt
+                      # Will NOT match file10.txt (because ? matches only ONE character)
+                      # or file.txt
+        ```
+
+---
+
+### `tree`
+
+*   **Description:** Displays a tree-like diagram of a directory's structure. This command is often *not* installed by default.
+*   **Installation (Debian/Ubuntu):**
+    ```bash
+    sudo apt install tree
+    ```
+   **(Installation for other distributions will vary)**
+   *   **Installation (CentOS/Fedora):**
+    ```bash
+    sudo yum install tree
+    ```
+
+*   **Example Usage:**
+
+    ```bash
+    tree        # Shows the tree structure of the current directory
+    tree /home/user/projects # shows from the /home/user/projects directory
+    tree -L 2  # Limits the display to 2 levels deep
+    ```
+
+    *Sample Output (truncated):*
+
+    ```
+    .
+    ├── my_folder
+    │   ├── file1.txt
+    │   └── file2.txt
+    └── another_folder
+        └── notes.md
+
+    2 directories, 3 files
+    ```
+---

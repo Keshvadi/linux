@@ -1,5 +1,5 @@
 ---
-title: Getting Started in Git (Tutorial)
+title: Getting Started in Git
 parent: Git & Version Control
 nav_order: 63
 layout: default

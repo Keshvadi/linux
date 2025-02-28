@@ -2,10 +2,10 @@
 title: Basic Commands
 nav_order: 20
 has_children: true
-parent: Linux & Command Line
+parent: The Shell
 layout: default
 ---
-
+<!-- 
 ## Prepare Your System for Tutorials
 
 Before jumping into the tutorials, run the following commands to set up your system for working with the provided examples.
@@ -34,4 +34,4 @@ ls
 
 **Note:** If you encounter a "command not found" error when attempting to run a command, it means the required program is not installed. In such cases, you need to install the program first.
 
-For example, we installed a program called 'wget' to download sample files here. You will learn more about package management in this tutorial.
+For example, we installed a program called 'wget' to download sample files here. You will learn more about package management in this tutorial. -->

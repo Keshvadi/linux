@@ -1,139 +1,117 @@
 ---
 title: Remote Working
 parent: Common Use Cases
-nav_order: 43
+nav_order: 41  # Corrected nav_order (previous was a duplicate 41)
 layout: default
 ---
 
 ## Remote Working
 
-Learning and using shell commands is essential for efficient remote work in Software Engineering. Shell commands provide powerful tools for managing tasks over a network.
+The ability to work remotely is a critical skill for software engineers.  The shell provides essential tools for connecting to remote systems, transferring files, and managing remote resources. This section covers key commands for remote work.
 
-**Note:** To practice these commands, you'll need access to a remote system, which will be covered in the last session about networking.
+*Important Note:* To practice these commands (except `wget` and `tar`), you'll need access to a remote server. This usually involves having an account on a remote machine and knowing its IP address or hostname.
 
 ---
 
-### `tar`
+### `tar` (Tape Archive)
 
-- Description: A utility to manipulate archives.
+*   **Description:**  `tar` is a versatile utility for creating and extracting archives (often called "tarballs").  It's commonly used for compressing and bundling files for transfer or backup. It *does not* compress files by default.
+*   **Example Usage:**
 
-- Example usage:
+    ```bash
+    tar -cvf archive.tar directory/     # Create an archive named 'archive.tar' containing 'directory/'
+    tar -xvf archive.tar              # Extract the contents of 'archive.tar'
+    tar -czvf archive.tar.gz directory/  # Create a *compressed* archive (using gzip)
+    tar -xzvf archive.tar.gz             # Extract a *compressed* archive (using gzip)
+    tar -cjvf archive.tar.bz2 directory/ # Create a compressed archive (using bzip2 - better compression, slower)
+    tar -xjvf archive.tar.bz2            # Extract a compressed archive (using bzip2)
+    tar -tvf archive.tar             # List the contents of an archive (without extracting)
+    ```
 
-  ```bash
-  tar -cvf archive.tar directory/ # Creating a tar archive from files in a directory
-  tar -xvf archive.tar # Extracting files from a tar archive
-  ```
+    *Key Options:*
+
+    *   `-c`: Create an archive.
+    *   `-x`: Extract an archive.
+    *   `-v`: Verbose mode (show files being processed).
+    *   `-f FILENAME`: Specify the archive filename.  *This must come last in the option list.*
+    *   `-z`: Use gzip compression (`.tar.gz` or `.tgz`).
+    *   `-j`: Use bzip2 compression (`.tar.bz2` or `.tbz2`).
+    *   `-t`: List archive contents.
 
 ---
 
 ### `wget`
 
-- Description: A command-line utility for downloading files from the internet.
+*   **Description:** Downloads files from the internet using HTTP, HTTPS, and FTP.
+*   **Example Usage:**
 
-- Example usage:
+    ```bash
+    wget [https://example.com/file.zip](https://example.com/file.zip)        # Download 'file.zip'
+    wget -O new_name.zip [https://example.com/file.zip](https://example.com/file.zip)  # Download and save as 'new_name.zip'
+    wget -c [https://example.com/large_file.zip](https://www.google.com/search?q=https://example.com/large_file.zip)  # Resume a partially downloaded file
+    wget --user=username --password=password [https://example.com/private_file.txt](https://www.google.com/search?q=https://example.com/private_file.txt)  # Download with authentication
+    ```
 
-  ```bash
-  wget https://example.com/file.zip # Downloading a file from a URL
-  wget -O output_filename.zip https://example.com/file.zip # Downloading a file and specifying an output filename
-  ```
+    *Key Options:*
 
----
-
-### `ssh`
-
-- Description: Secure Shell protocol used for securely connecting to a remote system over a network.
-
-- Example usage:
-
-  ```bash
-  ssh username@remote_host # Connecting to a remote server
-  ssh -p 2222 username@remote_host # Connecting to a remote server on a specific port (default port is 22)
-  ```
+    *   `-O FILE`:  Save the downloaded file as FILE.
+    *   `-c`: Continue a partially downloaded file.
+    *   `--user` and `--password`:  Provide credentials for HTTP authentication (use with caution - consider using a `.netrc` file for storing credentials securely).
 
 ---
 
-### `scp`
+### `ssh` (Secure Shell)
 
-- Description: Securely copy files between a local and a remote system using Secure Copy Protocol (SCP).
+*   **Description:** Securely connects to a remote system's shell.  `ssh` encrypts all traffic between your local machine and the remote server, making it safe to use even over untrusted networks.
+*   **Example Usage:**
 
-- Example usage:
+    ```bash
+    ssh username@remote_host  # Connect to 'remote_host' as 'username' (you'll be prompted for a password)
+    ssh -p 2222 username@remote_host  # Connect to port 2222 (the default SSH port is 22)
+    ssh -i my_key.pem username@remote_host  # Connect using an SSH key (more secure than passwords)
+    ssh user@host 'ls -l' # run a command remotely
+    ```
 
-  ```bash
-  scp username@remote_host:/remote/file.txt /local/directory/ # Copying from remote to local
-  scp /local/file.txt username@remote_host:/remote/directory/ # Copying from local to remote
-  ```
+    *Key Options:*
 
----
+    *   `-p PORT`:  Specify the port number to connect to.
+    *   `-i IDENTITY_FILE`:  Use an SSH key file (private key) for authentication.  This is *much* more secure than using passwords.
+    * `-L local_port:remote_host:remote_port`: Creates a local port forward.
+    * `-R local_port:remote_host:remote_port`: Creates a remote port forward.
+    * `-X`: Enables X11 forwarding (allows you to run graphical applications on the remote server and display them locally).
 
-<!--
-### ``
+    *Generating SSH Keys:*
 
-- Description:
+    ```bash
+    ssh-keygen -t rsa -b 4096  # Generate a new RSA key pair (recommended)
+    # You'll be prompted for a file to save the key in (default is ~/.ssh/id_rsa) and a passphrase (highly recommended).
+    # This creates two files: id_rsa (private key - keep it secret!) and id_rsa.pub (public key).
 
-- Example usage:
+    ssh-copy-id username@remote_host  # Copy your *public* key to the remote server (you'll be prompted for the password)
+    ```
 
-  ```bash
-
-  ```
-
----
-
-### ``
-
-- Description:
-
-- Example usage:
-
-  ```bash
-
-  ```
+    *Note:* After using `ssh-copy-id`, you should be able to `ssh` to the remote server without entering a password (as long as you've entered the passphrase for your key, if you set one).
 
 ---
 
-### ``
+### `scp` (Secure Copy)
 
-- Description:
+*   **Description:** Securely copies files between your local machine and a remote machine (or between two remote machines).  `scp` uses `ssh` for secure data transfer.
+*   **Example Usage:**
 
-- Example usage:
+    ```bash
+    scp username@remote_host:/path/to/remote/file.txt /local/path/  # Copy *from* the remote server *to* your local machine
+    scp /local/path/to/local_file.txt username@remote_host:/path/to/remote/ # Copy *from* your local machine *to* the remote server
+    scp -r username@remote_host:/path/to/remote/directory /local/path/  # Recursively copy a directory (-r)
+    scp -P 2222 username@remote_host:/path/to/file.txt /local/path/ # Use a non-standard SSH port (-P, capital P)
+    scp -i my_key.pem username@remote_host:/path/to/file.txt /local/path/ # Use an SSH key
+    ```
 
-  ```bash
+    *Key Options:*
 
-  ```
-
----
-
-### ``
-
-- Description:
-
-- Example usage:
-
-  ```bash
-
-  ```
+    *   `-r`:  Recursively copy directories.
+    *   `-P PORT` (uppercase P): Specify the SSH port number.
+    *   `-i IDENTITY_FILE`: Use an SSH key file.
+    *   `-p`: Preserves modification times, access times, and modes from the original file.
 
 ---
-
-### ``
-
-- Description:
-
-- Example usage:
-
-  ```bash
-
-  ```
-
----
-
-### ``
-
-- Description:
-
-- Example usage:
-
-  ```bash
-
-  ```
-
---- -->

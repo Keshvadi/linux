@@ -5,7 +5,7 @@ Setting Up Your Development Environment
 How to Use This Webbook
 Communication Channels
 Setting up the Environment
-Linux & Command Line
+The Shell
 basic
 Basic Navigation
 File Manipulation

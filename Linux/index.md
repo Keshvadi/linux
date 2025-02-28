@@ -1,5 +1,5 @@
 ---
-title: Linux & Command Line
+title: The Shell
 nav_order: 10
 has_children: true
 layout: default
@@ -19,7 +19,6 @@ In this tutorial, we will focus on the _Bourne Again SHell_, or “**_bash_**”
 
 To explore Bash commands, we'll use Docker during this session. However, there are several options detailed in the [installation](./Installation) page that you can explore later.
 
-Dr. Geoff Fink will provide in-depth instruction on Docker in the upcoming session.
 For our current objectives, follow these steps:
 
 1. Open Docker on your Windows system.

@@ -1,4 +1,4 @@
-# The Shell
+# The Missing Software Engineering Course
 
 This is the source for <a href="https://keshvadi.github.io/linux/">The Shell webbook</a>. It is built through Github Pages.
 

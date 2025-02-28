@@ -5,53 +5,65 @@ nav_order: 51
 layout: default
 ---
 
-## Terminolgy
+## Docker Terminology
 
-This section focuses on the terminolgy that you will see when you first start working with Docker.
+This section introduces the core concepts and terminology used in Docker. Understanding these terms is essential for working with Docker effectively.
 
 ---
 
 ## Docker Architecture
 
-At a glance the Docker terminolgy can appear incredibly confusing, however it is not as confusing as you would think...
+Docker's architecture is client-server based.  The key components are:
 
 ### Docker Engine
 
-The Docker Engine can be thought of as the heart of the docker program and it contains 3 components...
+The Docker Engine is the core of Docker, responsible for building and running containers. It consists of:
 
-- **_Docker Daemon_** : The Background service that manages images, containers, networks and volumes.
+*   **Docker Daemon (`dockerd`):**  A persistent background process that manages Docker objects (images, containers, networks, volumes).  The daemon listens for requests from the Docker CLI or other clients via the Docker API.
+*   **Docker CLI (Command-Line Interface):**  The primary way users interact with Docker.  You use commands like `docker run`, `docker build`, etc., to interact with the daemon.
+*   **Docker REST API:**  An API that allows tools and applications to interact with the Docker daemon programmatically.  The Docker CLI uses this API.
 
-- **_Docker CLI_** : Contains the commands used to interact with Docker.
+### Docker Objects
 
-- **_Docker Rest API_** : A way for the tools to interact with Docker programmatically.
+*   **Images:**  Read-only templates used to create containers.  Think of an image as a snapshot of a file system and application configuration.  Images are built from a `Dockerfile` (see below).  Images are *layered*, meaning they are built up from a series of read-only layers, which promotes efficiency and reusability.
+*   **Containers:**  Running instances of Docker images.  They are isolated environments that contain everything needed to run an application.  Containers are lightweight and share the host operating system's kernel.
+*   **Volumes:**  Persistent data storage for containers.  Volumes are *independent* of the container lifecycle, meaning data in a volume persists even if the container is stopped or deleted.  Volumes are the preferred way to store persistent data in Docker. They can be shared by multiple containers.
+*   **Networks:**  Enable communication between containers, and between containers and the outside world.  Docker provides different network drivers for various use cases (e.g., bridge networks for connecting containers on the same host, overlay networks for connecting containers across multiple hosts).
+* **Registries**: Repositories for storing and sharing docker images. Examples are DockerHub, AWS ECR and self-hosted registries.
 
-### Images
-Think of the image as a blueprint that contains the extra libraries, dependencies and runtime of your code.
+### Dockerfile
 
-### Containers
+*   **Description:** A text file that contains instructions for building a Docker image.  Each instruction in a `Dockerfile` creates a new layer in the image.
+*   **Key Instructions:**
+    *   `FROM`: Specifies the base image (e.g., `FROM ubuntu:22.04`).
+    *   `RUN`: Executes a command (e.g., `RUN apt-get update && apt-get install -y python3`).
+    *   `COPY`: Copies files from the host machine into the image.
+    *   `ADD`: Similar to `COPY`, but can also handle URLs and extract archives.
+    *   `WORKDIR`: Sets the working directory inside the image.
+    *   `ENV`: Sets environment variables.
+    *   `EXPOSE`:  Informs Docker that the container listens on the specified network ports at runtime (doesn't actually publish the ports).
+    *   `CMD`: Specifies the command to run when the container starts.  There can be only one `CMD` instruction (or it will be overridden).
+    *   `ENTRYPOINT`: Similar to `CMD`, but designed to be the main command of the container.  `CMD` arguments can be appended to `ENTRYPOINT`.
 
-Containers are the actual utilization of the Images, running in a separate environment (Containers are considered lightweight because they share the operating system of the host machine but are isolated from other containers.)
+### Docker Compose
 
-### Volumes
+*   **Description:** A tool for defining and managing multi-container Docker applications.  You define your application's services, networks, and volumes in a `docker-compose.yml` file (YAML format).  This makes it easy to start, stop, and manage complex applications with a single command.
 
-Volumes store data that a container uses and generates (*sort of like a save file*) This is important because when containers stop running, the data inside the container is lost. Volumes will save the data so that it can be used again later.
+**Example `docker-compose.yml`:**
 
-### Networks
-
-Networks allow containers to communicate with each other or connect to outside (*For example a webserver needing a database container*)
-
-### Registries
-
-Registries resemble an app store format where images can be stored, shared and downloaded. You can refer to the [DockerHub Quickstart](https://docs.docker.com/docker-hub/quickstart/) to get started with registries
-
-### Compose (_Advanced Topic_)
-
-Simply put, Docker compose is a tool that allows you to manage and interface all your docker containers in a single file (*Stored in a "**_YAML ~ .yml_** format*)
-
----
-
-## Dockerfile
-
-The Dockerfile contains the details needed for Docker to build a container image. It will contain information such as... - Your base operating system - Required dependencies - Commands to be executed when the container runs
-
-**Note** : You must build the Dockerfile yourself!! (see the 'Creating a Dockerfile' tab )
+```yaml
+version: "3.9"
+services:
+  web:
+    image: nginx:latest
+    ports:
+      - "80:80"
+  db:
+    image: postgres:14
+    environment:
+      POSTGRES_PASSWORD: mysecretpassword
+    volumes:
+      - db_data:/var/lib/postgresql/data
+volumes:
+  db_data:
+```

@@ -1,55 +1,99 @@
 ---
-title: Getting Started in Docker
+title: Getting Started with Docker
 parent: Docker
-nav_order: 53
+nav_order: 52
 layout: default
 ---
 
 ## Installation
 
-This section will focus on installation for Linux on Ubuntu however links to download and install are hyperlinked
+This section guides you through installing Docker on various operating systems. We'll focus on Ubuntu Linux, but provide links for Windows and macOS installations.
 
-- [Windows](https://docs.docker.com/desktop/setup/install/windows-install/)
-
-- [Mac](https://docs.docker.com/desktop/setup/install/mac-install/)
+*   [Windows Installation](https://docs.docker.com/desktop/install/windows-install/)
+*   [macOS Installation](https://docs.docker.com/desktop/install/mac-install/)
 
 ---
 
-## Linux
+## Linux (Ubuntu)
 
-There are many ways to install docker for Linux, this segment will only focus on the general installation for Ubuntu.
-Refer to _[Install Docker Engine](https://docs.docker.com/engine/install/)_ for more details on different version and distros
+These instructions are specifically for Ubuntu. For other Linux distributions, refer to the official Docker documentation: [Install Docker Engine](https://docs.docker.com/engine/install/).
 
-1. You need to setup the docker repository for your system.
+**Steps:**
 
-This ensures your system is installing official packages from Docker. This guarantees you are getting the latest updates, security updates and features directly from Docker
+1.  **Set up Docker's `apt` repository:** This allows your system to download and install official Docker packages.
 
     ```bash
-    # Add Docker's official GPG key:
+    # Update the apt package index and install packages to allow apt to use a repository over HTTPS:
     sudo apt-get update
-    sudo apt-get install ca-certificates curl
+    sudo apt-get install -y ca-certificates curl gnupg
+
+    # Create a directory for the keyring (if it doesn't exist)
     sudo install -m 0755 -d /etc/apt/keyrings
-    sudo curl -fsSL https://download.docker.com/linux/ubuntu/gpg -o /etc/apt/keyrings/docker.asc
-    sudo chmod a+r /etc/apt/keyrings/docker.asc
+
+    # Download Docker's official GPG key and add it to the keyring:
+    curl -fsSL [https://download.docker.com/linux/ubuntu/gpg](https://download.docker.com/linux/ubuntu/gpg) | sudo gpg --dearmor -o /etc/apt/keyrings/docker.gpg
+
+    # Set permissions on the key file
+    sudo chmod a+r /etc/apt/keyrings/docker.gpg
 
     # Add the repository to Apt sources:
     echo \
-    "deb [arch=$(dpkg --print-architecture) signed-by=/etc/apt/keyrings/docker.asc] https://download.docker.com/linux/ubuntu \
-    $(. /etc/os-release && echo "$VERSION_CODENAME") stable" | \
-    sudo tee /etc/apt/sources.list.d/docker.list > /dev/null
+      "deb [arch=$(dpkg --print-architecture) signed-by=/etc/apt/keyrings/docker.gpg] [https://download.docker.com/linux/ubuntu](https://download.docker.com/linux/ubuntu) \
+      $(lsb_release -cs) stable" | sudo tee /etc/apt/sources.list.d/docker.list > /dev/null
+
+    # Update the apt package index again:
     sudo apt-get update
     ```
 
-2. Install the Docker packages (And update Docker)
+    *Explanation:*
 
-   ```bash
-   sudo apt-get install docker-ce docker-ce-cli containerd.io docker-buildx-plugin docker-compose-plugin
-   ```
+    *   `apt-get update`: Updates the local package index.
+    *   `apt-get install -y ca-certificates curl gnupg`: Installs required packages (`-y` automatically answers "yes" to prompts).
+    *   `install -m 0755 -d /etc/apt/keyrings`: Creates the `/etc/apt/keyrings` directory with correct permissions.
+    *   `curl ... | sudo gpg --dearmor ...`: Downloads Docker's GPG key, dearmors it (converts it to a binary format), and saves it.
+    *   `chmod a+r ...`: Sets read permissions on the key file.
+    *   `echo ... | sudo tee ...`: Adds the Docker repository to your system's list of software sources.
+    *    `$(lsb_release -cs)`: gets your ubuntu version's codename.
 
-3. Test the docker installation with this command
+2.  **Install Docker Engine:**
 
-   ```bash
-   sudo docker run hello world
-   ```
+    ```bash
+    sudo apt-get install -y docker-ce docker-ce-cli containerd.io docker-buildx-plugin docker-compose-plugin
+    ```
+      *Explanation:*
+        *Installs packages for docker.
 
-   **_Note:_**(You must run docker commands with sudo, you can refer to [_linux postinstall_](https://docs.docker.com/engine/install/linux-postinstall/) to configure the Docker user group and mitigate this)
+3.  **Verify Installation:**
+
+    ```bash
+    sudo docker run hello-world
+    ```
+
+    *Sample Output (truncated):*
+
+    ```
+    Unable to find image 'hello-world:latest' locally
+    latest: Pulling from library/hello-world
+    ...
+    Status: Downloaded newer image for hello-world:latest
+
+    Hello from Docker!
+    This message shows that your installation appears to be working correctly.
+    ...
+    ```
+
+    This command downloads a test image ("hello-world") and runs it in a container.  If you see the "Hello from Docker!" message, your installation is working.
+
+4.  **(Optional, but Recommended) Manage Docker as a Non-Root User:**
+
+    By default, you need to use `sudo` to run Docker commands.  To avoid this, add your user to the `docker` group:
+
+    ```bash
+    sudo usermod -aG docker $USER
+    ```
+
+    *Important:*  You'll need to **log out and log back in** (or run `newgrp docker`) for this change to take effect. After logging back in, you should be able to run `docker` commands without `sudo`.
+
+    Refer to the official Docker documentation for more details on post-installation steps for Linux: [Linux Post-Installation](https://docs.docker.com/engine/install/linux-postinstall/)
+
+---
