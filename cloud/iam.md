@@ -65,9 +65,10 @@ This example shows how to create an IAM user, create a policy that grants read-o
     _Explanation:_
     _ `"Version": "2012-10-17"`: The version of the policy language.
     _ `"Statement": [...]`: An array of statement objects.
-    * `"Effect": "Allow"`: Specifies that the statement *allows* access.
-    * `"Action": [...]`: An array of actions that are allowed. `s3:GetObject` allows downloading objects, and `s3:ListBucket` allows listing the objects in the bucket.
-    * `"Resource": [...]`: An array of ARNs (Amazon Resource Names) that specify the resources the policy applies to. This policy allows access to the specified bucket *and* all objects within the bucket (`/*`).
+
+    - `"Effect": "Allow"`: Specifies that the statement _allows_ access.
+    - `"Action": [...]`: An array of actions that are allowed. `s3:GetObject` allows downloading objects, and `s3:ListBucket` allows listing the objects in the bucket.
+    - `"Resource": [...]`: An array of ARNs (Amazon Resource Names) that specify the resources the policy applies to. This policy allows access to the specified bucket _and_ all objects within the bucket (`/*`).
 
 3.  **Create the Policy in IAM:**
 

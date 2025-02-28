@@ -206,10 +206,9 @@ This section covers essential Docker commands for managing images, containers, a
   - **Description:** list all volumes.
   - **Example Usage:**
 
-
-      ```bash
-         docker volume ls
-      ```
+    ```bash
+       docker volume ls
+    ```
 
 - **`docker volume create`**
   - **Description:** create a volume.

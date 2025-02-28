@@ -133,12 +133,11 @@ Docker offers several network drivers, each with different characteristics and u
     ```
 
     _Sample output:_
-    `      NETWORK ID     NAME             DRIVER    SCOPE
-      b8e5353d129c   bridge           bridge    local
-      f39d1858d691   host             host      local
-      e167b7c47b5a   my_network       bridge    local
-      9f42668d62f6   none             null      local
-   `
+    `     NETWORK ID     NAME             DRIVER    SCOPE
+   b8e5353d129c   bridge           bridge    local
+   f39d1858d691   host             host      local
+   e167b7c47b5a   my_network       bridge    local
+   9f42668d62f6   none             null      local`
 
 - **`docker network inspect`**
 

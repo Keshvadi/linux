@@ -218,10 +218,9 @@ Package management is crucial for installing, updating, removing, and managing s
 - **Description**: Lists all installed packages including detailed information.
 - **Example Usage:**
 
-
-    ```bash
-    dpkg --list
-    ```
+  ```bash
+  dpkg --list
+  ```
 
 ---
 

@@ -134,12 +134,11 @@ Processes are running instances of programs on your system. Understanding how to
   **(Installation for other distributions will vary)**
 - **Installation (CentOS/Fedora):**
 
-
-    ```bash
-    sudo yum install htop
-    #OR
-    sudo dnf install htop
-    ```
+  ```bash
+  sudo yum install htop
+  #OR
+  sudo dnf install htop
+  ```
 
 - **Example Usage:**
 

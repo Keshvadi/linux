@@ -100,8 +100,7 @@ Cloning creates a local copy of a remote repository (on GitHub or elsewhere).
 
 To interact with GitHub repositories (push, pull) without repeatedly entering your credentials, you need to configure your local Git installation.
 
-<<<<<<< HEAD 3. **Check Credentials to see if they are correct**
-=======
+# <<<<<<< HEAD 3. **Check Credentials to see if they are correct**
 
 1.  **Set Your Git Username and Email:**
 

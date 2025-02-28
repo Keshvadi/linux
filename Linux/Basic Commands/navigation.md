@@ -147,10 +147,9 @@ Wildcards are special characters used to match multiple files or directories.
   **(Installation for other distributions will vary)**
 - **Installation (CentOS/Fedora):**
 
-
-    ```bash
-    sudo yum install tree
-    ```
+  ```bash
+  sudo yum install tree
+  ```
 
 - **Example Usage:**
 
